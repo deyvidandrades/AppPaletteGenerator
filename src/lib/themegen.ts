@@ -17,21 +17,26 @@ const toneMap = {
   tertiaryContainer: { light: 0.85, dark: 0.3 },
   onTertiaryContainer: { light: 0.15, dark: 0.85 },
 
+  background: { light: 0.99, dark: 0.07 },
+  onBackground: { light: 0.11, dark: 0.98 },
+
   surface: { light: 0.98, dark: 0.06 },
   onSurface: { light: 0.1, dark: 0.9 },
+  surfaceVariant: { light: 0.95, dark: 0.08 },
   onSurfaceVariant: { light: 0.3, dark: 0.7 },
-  surfaceDim: { light: 0.93, dark: 0.1 },
-  surfaceBright: { light: 0.99, dark: 0.15 },
   inverseSurface: { light: 0.2, dark: 0.9 },
   onInverseSurface: { light: 0.95, dark: 0.1 },
 
-  inversePrimary: { light: 0.8, dark: 0.4 },
+  surfaceDim: { light: 0.93, dark: 0.1 },
+  surfaceBright: { light: 0.99, dark: 0.15 },
 
   surfaceContainerLowest: { light: 0.99, dark: 0.05 },
   surfaceContainerLow: { light: 0.95, dark: 0.1 },
   surfaceContainer: { light: 0.9, dark: 0.15 },
   surfaceContainerHigh: { light: 0.85, dark: 0.2 },
   surfaceContainerHighest: { light: 0.8, dark: 0.25 },
+
+  inversePrimary: { light: 0.8, dark: 0.4 },
 
   outline: { light: 0.5, dark: 0.6 },
   outlineVariant: { light: 0.7, dark: 0.4 },
@@ -82,22 +87,24 @@ function ensureContrast(foreground: string, background: string, minRatio: number
 function isSurfaceRole(role: string): boolean {
   return [
     "surface",
+    "onSurface",
+    "surfaceVariant",
+    "onSurfaceVariant",
+    "inverseSurface",
+    "onInverseSurface",
     "surfaceDim",
     "surfaceBright",
-    "inverseSurface",
     "surfaceContainerLowest",
     "surfaceContainerLow",
     "surfaceContainer",
     "surfaceContainerHigh",
     "surfaceContainerHighest",
-    "onSurface",
-    "onSurfaceVariant",
     "outline",
   ].includes(role);
 }
 
 function hasOnColor(role: string): boolean {
-  return ["primary", "primaryContainer", "secondary", "secondaryContainer", "tertiary", "tertiaryContainer", "error", "errorContainer", "onSurface", "onSurfaceVariant"].includes(role);
+  return ["primary", "primaryContainer", "secondary", "secondaryContainer", "tertiary", "tertiaryContainer", "error", "errorContainer", "surface", "surfaceVariant", "inverseSurface", "background"].includes(role);
 }
 
 export function generatePalette(baseHex: string): AndroidTheme {
@@ -234,6 +241,7 @@ export function getDefaultColor(): string {
   }
   return defaultColor;
 }
+
 export function changeDefaultColor(color: string) {
   const url = new URL(window.location.href);
 

@@ -68,6 +68,13 @@
                         <ItemColorPalette title="Error Container" color={colorDictionary.errorContainer} onColor={colorDictionary.onErrorContainer} />
                     </div>
 
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-1">
+                        <ItemColorPalette title="Background" color={colorDictionary.background} onColor={colorDictionary.onBackground} isSingleColor={false} />
+                        <ItemColorPalette title="Surface" color={colorDictionary.surface} onColor={colorDictionary.onSurface} isSingleColor={false} />
+                        <ItemColorPalette title="SurfaceVariant" color={colorDictionary.surfaceVariant} onColor={colorDictionary.onSurfaceVariant} isSingleColor={false} />
+                        <ItemColorPalette title="Inverse Surface" color={colorDictionary.inverseSurface} onColor={colorDictionary.onInverseSurface} isSingleColor={false} />
+                    </div>
+
                     <div class="grid grid-cols-2 lg:grid-cols-3 gap-1">
                         <ItemColorPalette title="Surface Dim" color={colorDictionary.surfaceDim} onColor={colorDictionary.onSurface} isSingleColor={true} />
                         <ItemColorPalette title="Surface" color={colorDictionary.surface} onColor={colorDictionary.onSurface} isSingleColor={true} />
@@ -82,16 +89,9 @@
                         <ItemColorPalette title="Surface Container Highest" color={colorDictionary.surfaceContainerHighest} onColor={colorDictionary.onSurface} isSingleColor={true} />
                     </div>
 
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-1">
-                        <ItemColorPalette title="On Surface" color={colorDictionary.onSurface} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
-                        <ItemColorPalette title="On Surface Variant" color={colorDictionary.onSurfaceVariant} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
+                    <div class="grid grid-cols-2 lg:grid-cols-5 gap-1">
                         <ItemColorPalette title="Outline" color={colorDictionary.outline} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
                         <ItemColorPalette title="Outline Variant" color={colorDictionary.outlineVariant} onColor={colorDictionary.onSurface} isSingleColor={true} isSlim={true} />
-                    </div>
-
-                    <div class="grid grid-cols-2 lg:grid-cols-5 gap-1">
-                        <ItemColorPalette title="Inverse Surface" color={colorDictionary.inverseSurface} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
-                        <ItemColorPalette title="Inverse Surface" color={colorDictionary.onInverseSurface} onColor={colorDictionary.onSurface} isSingleColor={true} isSlim={true} />
                         <ItemColorPalette title="Inverse Primary" color={colorDictionary.inversePrimary} onColor={colorDictionary.onSurface} isSingleColor={true} isSlim={true} />
                         <ItemColorPalette title="Scrim" color={colorDictionary.scrim} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
                         <ItemColorPalette title="Shadow" color={colorDictionary.shadow} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />

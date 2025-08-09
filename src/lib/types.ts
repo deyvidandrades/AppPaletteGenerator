@@ -20,31 +20,44 @@ export type ColorDictionary = {
   onPrimary: string;
   primaryContainer: string;
   onPrimaryContainer: string;
+
   secondary: string;
   onSecondary: string;
   secondaryContainer: string;
   onSecondaryContainer: string;
+
   tertiary: string;
   onTertiary: string;
   tertiaryContainer: string;
   onTertiaryContainer: string;
+
+  background: string;
+  onBackground: string;
+
   surface: string;
-  surfaceDim: string;
-  surfaceBright: string;
+  onSurface: string;
+  surfaceVariant: string;
+  onSurfaceVariant: string;
   inverseSurface: string;
   onInverseSurface: string;
-  inversePrimary: string;
+
+  surfaceDim: string;
+  surfaceBright: string;
+
   surfaceContainerLowest: string;
   surfaceContainerLow: string;
   surfaceContainer: string;
   surfaceContainerHigh: string;
   surfaceContainerHighest: string;
-  onSurface: string;
-  onSurfaceVariant: string;
+
+  inversePrimary: string;
+
   outline: string;
   outlineVariant: string;
+
   scrim: string;
   shadow: string;
+
   error: string;
   onError: string;
   errorContainer: string;
