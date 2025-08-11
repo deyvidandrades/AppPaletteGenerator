@@ -141,15 +141,6 @@ export function generatePalette(baseHex: string): AndroidTheme {
       lightTheme[role as keyof ColorDictionary] = oklchToHex({ l: light, c: cLight, h: hueLight, mode: "oklch" });
       darkTheme[role as keyof ColorDictionary] = oklchToHex({ l: dark, c: cDark, h: hueDark, mode: "oklch" });
     }
-
-    lightTheme.onPrimary = ensureContrast(lightTheme.onPrimary!, lightTheme.primary!);
-    darkTheme.onPrimary = ensureContrast(darkTheme.onPrimary!, darkTheme.primary!);
-
-    lightTheme.onSecondary = ensureContrast(lightTheme.onSecondary!, lightTheme.secondary!);
-    darkTheme.onSecondary = ensureContrast(darkTheme.onSecondary!, darkTheme.secondary!);
-
-    lightTheme.onTertiary = ensureContrast(lightTheme.onTertiary!, lightTheme.tertiary!);
-    darkTheme.onTertiary = ensureContrast(darkTheme.onTertiary!, darkTheme.tertiary!);
   }
 
   for (const key in lightTheme) {
