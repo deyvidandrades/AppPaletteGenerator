@@ -56,7 +56,6 @@ export type ColorDictionary = {
   outlineVariant: string;
 
   scrim: string;
-  shadow: string;
 
   error: string;
   onError: string;

@@ -42,7 +42,6 @@ const toneMap = {
   outlineVariant: { light: 0.7, dark: 0.4 },
 
   scrim: { light: 0.0, dark: 0.0 },
-  shadow: { light: 0.0, dark: 0.0 },
 
   error: { light: 0.65, dark: 0.8 },
   onError: { light: 0.99, dark: 0.2 },

@@ -89,12 +89,11 @@
                         <ItemColorPalette title="Surface Container Highest" color={colorDictionary.surfaceContainerHighest} onColor={colorDictionary.onSurface} isSingleColor={true} />
                     </div>
 
-                    <div class="grid grid-cols-2 lg:grid-cols-5 gap-1">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-1">
                         <ItemColorPalette title="Outline" color={colorDictionary.outline} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
                         <ItemColorPalette title="Outline Variant" color={colorDictionary.outlineVariant} onColor={colorDictionary.onSurface} isSingleColor={true} isSlim={true} />
                         <ItemColorPalette title="Inverse Primary" color={colorDictionary.inversePrimary} onColor={colorDictionary.onSurface} isSingleColor={true} isSlim={true} />
                         <ItemColorPalette title="Scrim" color={colorDictionary.scrim} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
-                        <ItemColorPalette title="Shadow" color={colorDictionary.shadow} onColor={colorDictionary.surface} isSingleColor={true} isSlim={true} />
                     </div>
                 </div>
             {/if}
