@@ -187,8 +187,8 @@ function getThemeKt(theme: AndroidTheme): string {
       const value = lightTheme[key as keyof typeof lightTheme];
       const valueDark = darkTheme[key as keyof typeof darkTheme];
 
-      kotlinCode += `val ${key}Light = Color(0xFF${value.replace("#", "")});\n`;
-      kotlinCodeDark += `val ${key}Dark = Color(0xFF${valueDark.replace("#", "")});\n`;
+      kotlinCode += `val ${key}Light = Color(0xFF${value.replace("#", "")})\n`;
+      kotlinCodeDark += `val ${key}Dark = Color(0xFF${valueDark.replace("#", "")})\n`;
     }
   }
   kotlinCode += "\n";
