@@ -121,8 +121,8 @@ export function generatePalette(baseHex: string): AndroidTheme {
 
       if (isSurfaceRole(role)) baseChroma = baseChroma * 0.2;
 
-      const cLight = safeChroma(light, baseChroma);
-      const cDark = safeChroma(dark, baseChroma);
+      const cLight = baseChroma; //safeChroma(light, baseChroma);
+      const cDark = baseOklch.c; //safeChroma(dark, baseChroma);
 
       let hueLight = baseOklch.h;
       let hueDark = baseOklch.h;
