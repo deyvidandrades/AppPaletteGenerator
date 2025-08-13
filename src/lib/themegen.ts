@@ -3,48 +3,48 @@ import { type AndroidTheme, type ColorDictionary } from "./types";
 
 const toneMap = {
   primary: { light: 0.4, dark: 0.8 },
-  onPrimary: { light: 0.99, dark: 0.2 },
+  onPrimary: { light: 1.0, dark: 0.2 },
   primaryContainer: { light: 0.9, dark: 0.3 },
   onPrimaryContainer: { light: 0.1, dark: 0.9 },
 
-  secondary: { light: 0.55, dark: 0.75 },
-  onSecondary: { light: 0.99, dark: 0.2 },
-  secondaryContainer: { light: 0.85, dark: 0.35 },
-  onSecondaryContainer: { light: 0.15, dark: 0.85 },
+  secondary: { light: 0.4, dark: 0.8 },
+  onSecondary: { light: 1.0, dark: 0.2 },
+  secondaryContainer: { light: 0.9, dark: 0.3 },
+  onSecondaryContainer: { light: 0.1, dark: 0.9 },
 
-  tertiary: { light: 0.45, dark: 0.8 },
-  onTertiary: { light: 0.99, dark: 0.2 },
-  tertiaryContainer: { light: 0.85, dark: 0.3 },
-  onTertiaryContainer: { light: 0.15, dark: 0.85 },
+  tertiary: { light: 0.4, dark: 0.8 },
+  onTertiary: { light: 1.0, dark: 0.2 },
+  tertiaryContainer: { light: 0.9, dark: 0.3 },
+  onTertiaryContainer: { light: 0.1, dark: 0.9 },
 
-  background: { light: 0.99, dark: 0.07 },
-  onBackground: { light: 0.11, dark: 0.98 },
+  background: { light: 0.99, dark: 0.06 },
+  onBackground: { light: 0.1, dark: 0.9 },
 
-  surface: { light: 0.98, dark: 0.06 },
+  surface: { light: 0.99, dark: 0.06 },
   onSurface: { light: 0.1, dark: 0.9 },
-  surfaceVariant: { light: 0.95, dark: 0.08 },
-  onSurfaceVariant: { light: 0.3, dark: 0.7 },
+  surfaceVariant: { light: 0.9, dark: 0.3 },
+  onSurfaceVariant: { light: 0.3, dark: 0.8 },
   inverseSurface: { light: 0.2, dark: 0.9 },
-  onInverseSurface: { light: 0.95, dark: 0.1 },
+  onInverseSurface: { light: 0.95, dark: 0.2 },
 
-  surfaceDim: { light: 0.93, dark: 0.1 },
-  surfaceBright: { light: 0.99, dark: 0.15 },
+  surfaceDim: { light: 0.87, dark: 0.06 },
+  surfaceBright: { light: 0.98, dark: 0.24 },
 
-  surfaceContainerLowest: { light: 0.99, dark: 0.05 },
-  surfaceContainerLow: { light: 0.95, dark: 0.1 },
-  surfaceContainer: { light: 0.9, dark: 0.15 },
-  surfaceContainerHigh: { light: 0.85, dark: 0.2 },
-  surfaceContainerHighest: { light: 0.8, dark: 0.25 },
+  surfaceContainerLowest: { light: 1.0, dark: 0.04 },
+  surfaceContainerLow: { light: 0.96, dark: 0.1 },
+  surfaceContainer: { light: 0.94, dark: 0.12 },
+  surfaceContainerHigh: { light: 0.92, dark: 0.17 },
+  surfaceContainerHighest: { light: 0.9, dark: 0.22 },
 
   inversePrimary: { light: 0.8, dark: 0.4 },
 
   outline: { light: 0.5, dark: 0.6 },
-  outlineVariant: { light: 0.7, dark: 0.4 },
+  outlineVariant: { light: 0.8, dark: 0.3 },
 
   scrim: { light: 0.0, dark: 0.0 },
 
-  error: { light: 0.65, dark: 0.8 },
-  onError: { light: 0.99, dark: 0.2 },
+  error: { light: 0.4, dark: 0.8 },
+  onError: { light: 1.0, dark: 0.2 },
   errorContainer: { light: 0.9, dark: 0.3 },
   onErrorContainer: { light: 0.1, dark: 0.9 },
 };
