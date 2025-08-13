@@ -99,6 +99,7 @@ function isSurfaceRole(role: string): boolean {
     "surfaceContainerHigh",
     "surfaceContainerHighest",
     "outline",
+    "background",
   ].includes(role);
 }
 
