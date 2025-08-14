@@ -72,7 +72,7 @@
                         <ItemColorPalette title="Background" color={colorDictionary.background} onColor={colorDictionary.onBackground} isSingleColor={false} />
                         <ItemColorPalette title="Surface" color={colorDictionary.surface} onColor={colorDictionary.onSurface} isSingleColor={false} />
                         <ItemColorPalette title="SurfaceVariant" color={colorDictionary.surfaceVariant} onColor={colorDictionary.onSurfaceVariant} isSingleColor={false} />
-                        <ItemColorPalette title="Inverse Surface" color={colorDictionary.inverseSurface} onColor={colorDictionary.onInverseSurface} isSingleColor={false} />
+                        <ItemColorPalette title="Inverse Surface" color={colorDictionary.inverseSurface} onColor={colorDictionary.inverseOnSurface} isSingleColor={false} />
                     </div>
 
                     <div class="grid grid-cols-2 lg:grid-cols-3 gap-1">
