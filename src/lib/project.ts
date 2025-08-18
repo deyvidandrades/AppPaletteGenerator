@@ -11,7 +11,7 @@ export const project: Project = {
 
   url: "https://deyvidandrades.github.io/AppPaletteGenerator/",
   keywords: "color, palette, generator, android, app, design",
-  version: "v1.0.2",
+  version: "v1.1.0",
 
   links_nav: [
     { text: "Home", url: "https://deyvidandrades.github.io/", is_new_tab: false },
