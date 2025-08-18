@@ -2,7 +2,7 @@
     import { Link2 } from "lucide-svelte";
     import { onMount } from "svelte";
 
-    import { type AndroidTheme, changeDefaultColor, type ColorDictionary, generatePalette, getDefaultColor, project } from "@/lib";
+    import { type AndroidTheme, changeDefaultColor, getDefaultColor, getTheme, project } from "@/lib";
     import ItemCardPalette from "@/components/ItemCardPalette.svelte";
 
     let inputValue: string = $state("#9452ff");
@@ -17,8 +17,7 @@
 
     function updateColors() {
         baseColor = inputValue;
-        baseTheme = generatePalette(baseColor);
-
+        baseTheme = getTheme(baseColor);
     }
 </script>
 
