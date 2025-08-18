@@ -8,13 +8,7 @@
     let inputValue: string = $state("#9452ff");
     let baseColor: string = $state("");
 
-    let arrayDictKeys: Array<string> = $state([]);
-    let arrayDictValues: Array<string> = $state([]);
-    let arrayDictValuesDark: Array<string> = $state([]);
-
     let baseTheme: AndroidTheme | undefined = $state();
-    let colorDictionary: ColorDictionary | undefined = $state();
-    let colorDictionaryDark: ColorDictionary | undefined = $state();
 
     onMount(() => {
         inputValue = getDefaultColor();
@@ -25,22 +19,6 @@
         baseColor = inputValue;
         baseTheme = generatePalette(baseColor);
 
-        arrayDictKeys = [];
-        arrayDictValues = [];
-        arrayDictValuesDark = [];
-
-        colorDictionary = baseTheme.light;
-        colorDictionaryDark = baseTheme.dark;
-
-        for (const key in colorDictionary) {
-            if (Object.prototype.hasOwnProperty.call(colorDictionary, key)) {
-                const value = colorDictionary[key as keyof typeof colorDictionary];
-                const valueDark = colorDictionaryDark[key as keyof typeof colorDictionaryDark];
-                arrayDictKeys.push(key);
-                arrayDictValues.push(value);
-                arrayDictValuesDark.push(valueDark);
-            }
-        }
     }
 </script>
 
