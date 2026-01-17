@@ -31,15 +31,22 @@ export type ColorDictionary = {
   tertiaryContainer: string;
   onTertiaryContainer: string;
 
+  error: string;
+  onError: string;
+  errorContainer: string;
+  onErrorContainer: string;
+
   background: string;
   onBackground: string;
 
   surface: string;
   onSurface: string;
+
   surfaceVariant: string;
   onSurfaceVariant: string;
+
   inverseSurface: string;
-  onInverseSurface: string;
+  inverseOnSurface: string;
 
   surfaceDim: string;
   surfaceBright: string;
@@ -56,11 +63,6 @@ export type ColorDictionary = {
   outlineVariant: string;
 
   scrim: string;
-
-  error: string;
-  onError: string;
-  errorContainer: string;
-  onErrorContainer: string;
 };
 export type AndroidTheme = {
   light: ColorDictionary;
