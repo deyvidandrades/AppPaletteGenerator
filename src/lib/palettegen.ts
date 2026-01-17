@@ -43,11 +43,11 @@ export function getTheme(color: string): AndroidTheme {
   const errorChroma = 52;
 
   const primaryPalette = TonalPalette.fromHueAndChroma(baseColor.hue, baseColor.chroma);
-  const secondaryPalette = TonalPalette.fromHueAndChroma(baseColor.hue, baseColor.chroma * 0.5);
+  const secondaryPalette = TonalPalette.fromHueAndChroma(baseColor.hue, baseColor.chroma * 0.65);
   const tertiaryPalette = TonalPalette.fromHueAndChroma(baseColor.hue, baseColor.chroma * 0.45);
 
-  const neutralPalette = TonalPalette.fromHueAndChroma(baseColor.hue, 4);
-  const neutralVariantPalette = TonalPalette.fromHueAndChroma(baseColor.hue, 8);
+  const neutralPalette = TonalPalette.fromHueAndChroma(baseColor.hue, 8);
+  const neutralVariantPalette = TonalPalette.fromHueAndChroma(baseColor.hue, 12);
 
   const errorPalette = TonalPalette.fromHueAndChroma(errorHue, errorChroma);
 
@@ -58,20 +58,59 @@ export function getTheme(color: string): AndroidTheme {
     const role = key as keyof ColorDictionary;
     const { palette, light, dark } = TONE_MAP[role];
 
+    const mainColorStarurationLight = 0.8;
+    const mainColorStarurationDark = 0.8;
+    const mainColorLightnessLight = 0.1;
+    const mainColorLightnessDark = 0.15;
+
     switch (palette) {
       case PALETTE.PRIMARY:
+        dictionaryLight[role] = hexFromArgb(primaryPalette.tone(light));
+        dictionaryDark[role] = hexFromArgb(primaryPalette.tone(dark));
+
+        switch (role) {
+          case "primary":
+            dictionaryLight[role] = hslToHex({
+              h: baseColorHSL.h,
+              s: baseColorHSL.s * mainColorStarurationLight,
+              l: baseColorHSL.l,
+              mode: "hsl",
+            });
+            dictionaryDark[role] = hslToHex({
+              h: baseColorHSL.h,
+              s: baseColorHSL.s * mainColorStarurationDark,
+              l: baseColorHSL.l,
+              mode: "hsl",
+            });
+            break;
+          case "primaryContainer":
+            dictionaryLight[role] = hslToHex({
+              h: baseColorHSL.h,
+              s: baseColorHSL.s * mainColorStarurationLight,
+              l: baseColorHSL.l + mainColorLightnessLight,
+              mode: "hsl",
+            });
+            dictionaryDark[role] = hslToHex({
+              h: baseColorHSL.h,
+              s: baseColorHSL.s * mainColorStarurationDark,
+              l: baseColorHSL.l * mainColorLightnessDark,
+              mode: "hsl",
+            });
+            break;
+        }
+        /*
         if (role == "primaryContainer") {
           // dictionaryLight[role] = hslToHex(baseColorHSL);
           // dictionaryDark[role] = hslToHex(baseColorHSL);
           dictionaryLight[role] = hslToHex({ h: baseColorHSL.h, s: baseColorHSL.s, l: baseColorHSL.l, mode: "hsl" });
           dictionaryDark[role] = hslToHex({ h: baseColorHSL.h, s: baseColorHSL.s, l: baseColorHSL.l * 0.2, mode: "hsl" });
         } else if (role == "primary") {
-          dictionaryLight[role] = hslToHex({ h: baseColorHSL.h, s: baseColorHSL.s * 0.6, l: 0.3, mode: "hsl" });
-          dictionaryDark[role] = hslToHex({ h: baseColorHSL.h, s: baseColorHSL.s * 0.6, l: 0.5, mode: "hsl" });
+          dictionaryLight[role] = hslToHex({ h: baseColorHSL.h, s: baseColorHSL.s * 0.6, l: 0.7, mode: "hsl" });
+          dictionaryDark[role] = hslToHex({ h: baseColorHSL.h, s: baseColorHSL.s * 0.6, l: 0.9, mode: "hsl" });
         } else {
           dictionaryLight[role] = hexFromArgb(primaryPalette.tone(light));
           dictionaryDark[role] = hexFromArgb(primaryPalette.tone(dark));
-        }
+        }*/
         break;
       case PALETTE.SECONDARY:
         dictionaryLight[role] = hexFromArgb(secondaryPalette.tone(light));

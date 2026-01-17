@@ -8,19 +8,19 @@ export enum PALETTE {
 }
 
 export const TONE_MAP: Record<string, Record<string, number>> = {
-  primary: { palette: PALETTE.PRIMARY, light: 40, dark: 80 },
+  primary: { palette: PALETTE.PRIMARY, light: 70, dark: 90 },
   onPrimary: { palette: PALETTE.PRIMARY, light: 100, dark: 20 },
-  primaryContainer: { palette: PALETTE.PRIMARY, light: 90, dark: 30 },
+  primaryContainer: { palette: PALETTE.PRIMARY, light: 90, dark: 25 },
   onPrimaryContainer: { palette: PALETTE.PRIMARY, light: 10, dark: 90 },
 
-  secondary: { palette: PALETTE.SECONDARY, light: 40, dark: 80 },
+  secondary: { palette: PALETTE.SECONDARY, light: 70, dark: 90 },
   onSecondary: { palette: PALETTE.SECONDARY, light: 100, dark: 20 },
-  secondaryContainer: { palette: PALETTE.SECONDARY, light: 90, dark: 30 },
+  secondaryContainer: { palette: PALETTE.SECONDARY, light: 90, dark: 25 },
   onSecondaryContainer: { palette: PALETTE.SECONDARY, light: 10, dark: 90 },
 
-  tertiary: { palette: PALETTE.TERTIARY, light: 40, dark: 80 },
+  tertiary: { palette: PALETTE.TERTIARY, light: 70, dark: 90 },
   onTertiary: { palette: PALETTE.TERTIARY, light: 100, dark: 20 },
-  tertiaryContainer: { palette: PALETTE.TERTIARY, light: 90, dark: 30 },
+  tertiaryContainer: { palette: PALETTE.TERTIARY, light: 90, dark: 25 },
   onTertiaryContainer: { palette: PALETTE.TERTIARY, light: 10, dark: 90 },
 
   error: { palette: PALETTE.ERROR, light: 40, dark: 80 },
